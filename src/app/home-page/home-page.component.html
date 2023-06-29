@@ -1,0 +1,151 @@
+<!-- navbar -->
+
+<nav class="navbar navbar-expand-lg bg-black" id="id2">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="../../assets/984485 (1).png" alt="Logo" width="130" height="50"
+                class="d-inline-block align-text-top">
+            i Acceleration
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-grow-1">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Claims</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Renewals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Become Agent</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Resources</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="row">
+    <div class="spinner-border text-secondary" id="id1" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="spinner-border text-secondary" id="id1" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+
+
+<!-- content -->
+
+<div class="bg">
+    <br>
+    <div class="heading m-3">
+        <h3>Our service has no speed limits . . .</h3>
+        <h6>No. 1 Auto insuarance company in India</h6>
+        <h6>Millions of happy customers</h6>
+    </div>
+
+    <div class="col-md-3 mt-5">
+        <ul class="nav mx-1 d-flex justify-content-around">
+            <li class="nav-item">
+                <a class="tabs" (click)="showCarForm()"><img src="../../assets/car_3202926.png"
+                        class="rounded-pill shadow-sm bg-secondary p-2">
+                    <h6>Cars</h6>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="tabs" (click)="showBikeForm()"><img
+                        src="../../assets/bike-with-motor-ios-7-interface-symbol_17893.png"
+                        class="rounded-pill shadow-sm bg-secondary p-2">
+                    <h6>Bikes</h6>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="tabs" (click)="showPlaneForm()"><img src="../../assets/plane_5655602.png"
+                        class="rounded-pill shadow-sm bg-secondary p-2">
+                    <h6>Travel</h6>
+                </a>
+        </ul>
+    </div>
+
+    <div class="col-md-5  m-3 bg-dark shadow" *ngIf="showCar == true">
+        <div class="d-flex">
+            <div class=" p-2 flex-fill">
+                <label for="example1" class="form-label text-white">Registration No :</label>
+                <input type="text" class="form-control" id="example1" placeholder="Enter registration no.">
+            </div>
+            <div class=" p-2 flex-fill">
+                <label for="example2" class="form-label text-white">Mobile No :</label>
+                <input type="text" class="form-control" id="example2" placeholder="10 digit mobile no.">
+            </div>
+            <div class="p-4 mt-2 flex-fill">
+                <button type="button" class="btn btn-primary">View Prices</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <button type="button" class="btn btn-success btn-sm mx-3" routerLink="/CarInsurance" *ngIf="showCar==true">DON'T
+            HAVE REGISTRATION NUMBER ➤</button>
+        <button type="button" class="btn btn-success btn-sm mx-3" *ngIf="showCar==true">IT'S A BRAND NEW CAR ➤</button>
+    </div>
+
+    <div class="col-md-5 bg- m-3 bg-dark shadow" *ngIf="showBike == true">
+        <div class="d-flex">
+            <div class="p-2 flex-fill">
+                <label for="example3" class="form-label text-white">Registration No.</label>
+                <input type="text" class="form-control" id="example3" placeholder="Enter registration no.">
+            </div>
+            <div class="p-3 flex-fill">
+                <label class="text-white">Previous Policy :</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                    <label class="form-check-label text-white" for="flexRadioDefault1">
+                        Not Expired
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                    <label class="form-check-label text-white" for="flexRadioDefault2">
+                        Expired
+                    </label>
+                </div>
+            </div>
+            <div class="p-2 m-3 flex-fill">
+                <button type="button" class="btn btn-primary">View Prices</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-7 bg- m-3 bg-dark shadow" *ngIf="showPlane == true">
+        <div class="d-flex">
+            <div class="p-2 flex-fill">
+                <label for="example5" class="form-label text-white">Where are you going?</label>
+                <input type="text" class="form-control" id="example5" placeholder="Enter your destination">
+            </div>
+            <div class="p-2 flex-fill">
+                <label for="example6" class="form-label text-white">Leaving Date :</label>
+                <input type="date" class="form-control" id="example6">
+            </div>
+            <div class="p-2 flex-fill">
+                <label for="example7" class="form-label text-white">Return Date :</label>
+                <input type="date" class="form-control" id="example7">
+            </div>
+            <div class="p-2 m-3 flex-fill">
+                <button type="button" class="btn btn-primary">View Quotes</button>
+            </div>
+        </div>
+    </div>
+
+</div>

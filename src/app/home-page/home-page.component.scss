@@ -1,0 +1,56 @@
+//navbar anchors
+li a{
+    padding: 2px;
+    color: aliceblue;
+    width: 110px;
+    text-align: center;
+    font-size: smaller;
+    font-weight: 500;
+
+}
+
+.nav-link:hover{
+    
+    background-color:dodgerblue ;
+}
+
+//spinners
+.row{
+    position: absolute;
+    top: 38px;
+    left: 38.5px;
+}
+
+//site name
+.navbar-brand{
+    font-size: xx-large;
+    font-weight: 600;
+    font-style:italic;
+    color:dodgerblue;
+}
+
+//background image
+.background{
+width: 100%;
+}
+
+.bg{
+    background-image: url('../../assets/istockphoto-509469590-170667a.jpg');
+    height: 90vh;
+    background-size: 100% 100%;
+}
+
+.heading{
+    color: aliceblue;
+
+}
+
+//rounded pills
+.rounded-pill{
+    height: 55px;
+    width: 55px;
+}
+
+.tabs{
+    text-decoration: none;
+}

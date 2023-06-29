@@ -1,0 +1,27 @@
+li a{
+    padding: 2px;
+    color: aliceblue;
+    width: 140px;
+    text-align: center;
+    font-size: small;
+    font-weight: 500;
+
+}
+
+.nav-link:hover{
+    
+    background-color:dodgerblue ;
+}
+
+.navbar-brand{
+    font-size: xx-large;
+    font-weight: 600;
+    font-style:italic;
+    color: dodgerblue;
+}
+
+.bg{
+    background-image: url('../../assets/background2.png');
+    height: 90vh;
+    background-size: 100% 100%;
+}
