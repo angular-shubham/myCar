@@ -5,21 +5,20 @@ import { Injectable } from '@angular/core';
 })
 export class CarInsuranceService {
 
-  carInsuranceModal : any = {
+  carInsuranceModal : CarInsurance = {
    "brandName" : '',
    "modelName" : '',
-   "varientName" : ''
+   "variantName" : '',
+   "registerData" : {}
   }
   constructor() { }
 
-  getCarInsuranceModal(){
-  return new CarInsurance();
- }
+
 }
  export class CarInsurance{
   brandName!: string;
   modelName!: string;
-  variantName!: string
-
+  variantName! : string;
+  registerData! : {}
  }
 

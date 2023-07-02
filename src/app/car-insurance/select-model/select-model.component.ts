@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HttpService } from 'src/app/core/Services/http.service';
 import { CarInsuranceService } from '../Services/car-insurance.service';
 
@@ -14,7 +14,7 @@ export class SelectModelComponent implements OnInit {
   modelList: any[] = [];
   insuranceData : any;
   
-  constructor(private activeRoute : ActivatedRoute, private http : HttpService, private carservice : CarInsuranceService){
+  constructor(private activeRoute : ActivatedRoute, private http : HttpService, private carservice : CarInsuranceService, private router : Router){
     this.selectedBrand = this.activeRoute.snapshot.paramMap.get('brandName');
     this.insuranceData = carservice.carInsuranceModal;
   }
@@ -37,7 +37,8 @@ error =>{
 )
   }
 
-  selectModel(modelName:any){
-
+  selectModel(model:any){
+    this.insuranceData.modelName=model;
+    this.router.navigate(['/CarInsurance/variant',model]);
   }
 }

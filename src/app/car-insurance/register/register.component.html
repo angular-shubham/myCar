@@ -1,0 +1,51 @@
+<div class="container w-75">
+    <div class="row">
+        <div class="window col-md-6">
+            <form [formGroup]="regiForm" (ngSubmit)="save();">
+            <h3 class="text-white mt-2">When did you register your car ?</h3>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <select class="form-select" aria-label="Default select example" formControlName="year">
+                        <option selected>Years</option>
+                        <option *ngFor="let items of years">{{items}}</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <select class="form-select" aria-label="Default select example" formControlName="month">
+                        <option selected>Month</option>
+                        <option *ngFor="let items of months">{{items}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h3 class="text-white">Select your location :</h3>
+                    <select class="form-select" aria-label="Default select example" formControlName="city">
+                        <option selected>Cities</option>
+                        <option *ngFor="let items of cities">{{items}}</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="row mt-3">
+                <h3 class="text-white mt-3">When will your policy expire?</h3>
+                <div class="col-md-6 mt-3">
+                    <label class="text-white">Own Damage Expiry :</label>
+                    <input type="date" class="form-control" formControlName="Odate">
+                </div>
+                <div class="col-md-6 mt-2">
+                    <label class="text-white mt-2">Third Party Expiry :</label>
+                    <input type="date" class="form-control" formControlName="Tdate">
+                </div>
+            </div>
+            <button class="btn btn-primary btn-sm col-md-12 mt-5" type="submit">Proceed ➤ </button>
+        </form>
+        </div>
+
+        <div class="window col-md-6">
+         <app-insurance-details [insuranceData]="insuranceData"></app-insurance-details>
+        </div>
+    </div>
+</div>

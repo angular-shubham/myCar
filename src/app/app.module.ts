@@ -7,10 +7,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -19,7 +22,9 @@ import { CoreModule } from './core/core.module';
     ReactiveFormsModule,
     RouterModule,
     HttpClientModule,
-    CoreModule
+    CoreModule,
+    BrowserAnimationsModule,
+    
     
   ],
   providers: [],

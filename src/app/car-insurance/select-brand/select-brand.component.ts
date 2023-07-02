@@ -31,7 +31,7 @@ insuranceData! : CarInsurance;
 
 constructor(private car : CarInsuranceService, private router: Router){
 
-  this.insuranceData = this.car.getCarInsuranceModal()
+  this.insuranceData = this.car.carInsuranceModal
 }
 
 selectBrand(name:string){

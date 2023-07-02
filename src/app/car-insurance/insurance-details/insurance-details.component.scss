@@ -4,5 +4,19 @@ a {
     text-decoration: none;
     border: 1px white;
     border-radius: 3px;
-    background-color: dodgerblue;
+    background-color: darkslateblue;
+}
+
+.row{
+
+    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.show{
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 30px;
+    background-color:darkcyan;
 }

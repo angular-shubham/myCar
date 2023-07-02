@@ -1,16 +1,18 @@
 <div class="container w-75">
     <div class="row">
-        <div class="col-md-6 border">
-            <label for="form" class="form-label text-white">Select Brand :</label>
-            <input type="text" class="form-control" id="form" [(ngModel)]="insuranceData.modelName" placeholder="Please select your car model">
+        <div class=" window col-md-6">
+            <label for="form" class="form-label text-white">Select Model :</label>
+            <input type="text" class="form-control" id="form" [(ngModel)]="insuranceData.modelName"
+                placeholder="Please select your car model">
             <div class="row m-3">
-                <div class="col-md-5 border rounded mt-2 mx-3 d-flex justify-content-start" id="brandList" *ngFor="let item of modelList" (click)="selectModel(item.concat)">
-                  <span class="m-2 text-white">{{item.concat}}</span> 
+                <div class="col-md-11 border rounded mt-2 mx-3 d-flex justify-content-start" id="brandList"
+                    *ngFor="let item of modelList" (click)="selectModel(item.concat)">
+                    <span class="m-2 text-white">{{item.concat}}</span>
                 </div>
+            </div>
         </div>
-        <div class="col-md-6 border">
+        <div class="window col-md-6">
             <app-insurance-details [insuranceData]="insuranceData"></app-insurance-details>
         </div>
     </div>
-
 </div>
